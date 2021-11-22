@@ -48,24 +48,24 @@ async function login(event) {
   // não se esqueça de estudar a estrutura do objeto que sua API retorna!
   console.log(data);
 
-  /* //Validando se o login obteve sucesso
+   //Validando se o login obteve sucesso
    if (response.status == 200) {
      buscaUsuarioLogado();
    }
-     //Outra maneira de validar se o login obteve sucesso
+  /*    //Outra maneira de validar se o login obteve sucesso
     if (data.token != null) {
       //buscaUsuarioLogado();
-    } */
+    }  */
 
   if (data.error) {
     alert(data.error);
   }
 
 
-  /*  // RESOLUÇÃO: Sugestão extra - Mesa de trabalho Aula 18 
+   // RESOLUÇÃO: Sugestão extra - Mesa de trabalho Aula 18 
    async function buscaUsuarioLogado() {
  
-     let urlUsuario = `https://reqres.in/api/users/4`;
+     let urlUsuario = `https://reqres.in/api/users/2`;
  
      //Captura os dados na API
      let responseUser = await fetch(urlUsuario); //Equivalente ao GET
@@ -83,7 +83,7 @@ async function login(event) {
      document.getElementById("lastName").innerHTML = user.last_name
      document.getElementById("emailUser").innerHTML = user.email;
      document.getElementById("avatar").src = user.avatar;
-   } */
+   } 
 
 
 }
