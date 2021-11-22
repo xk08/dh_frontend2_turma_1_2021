@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Cadastro</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li class="link-especial"><a href="#" id="perfil">Olá, visitante</a></li>
+    </ul>
+  </nav>
+
+  <main class="flex">
+
+    <form class="flex" name="login">
+      <input type="text" name="title" id="title" placeholder="Titulo do post">
+      <textarea name="desc" id="desc" placeholder="Informe aqui a descrição..."></textarea>
+      <input type="submit" id="btn" value="Cadastrar novo post" class="button">
+    </form>
+
+    <!--Nesta tag <p> será exibido o id quando a resposta for retornada pela API-->
+    <p></p>
+
+  </main>
+
+
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
