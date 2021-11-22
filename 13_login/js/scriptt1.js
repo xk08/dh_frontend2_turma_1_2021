@@ -48,10 +48,10 @@ async function login(event) {
   // não se esqueça de estudar a estrutura do objeto que sua API retorna!
   console.log(data);
 
-   //Validando se o login obteve sucesso
-   if (response.status == 200) {
-     buscaUsuarioLogado();
-   }
+  //Validando se o login obteve sucesso
+  if (response.status == 200) {
+    buscaUsuarioLogado();
+  }
   /*    //Outra maneira de validar se o login obteve sucesso
     if (data.token != null) {
       //buscaUsuarioLogado();
@@ -62,30 +62,30 @@ async function login(event) {
   }
 
 
-   // RESOLUÇÃO: Sugestão extra - Mesa de trabalho Aula 18 
-   async function buscaUsuarioLogado() {
- 
-     let urlUsuario = `https://reqres.in/api/users/2`;
- 
-     //Captura os dados na API
-     let responseUser = await fetch(urlUsuario); //Equivalente ao GET
- 
-     //Converte para json
-     let userJson = await responseUser.json()
- 
-     let user = userJson.data;
- 
-     console.log("Nome do usuário capturado: " + user.first_name);
-     console.log("Email do usuário capturado: " + user.email);
- 
-     //Enviando para os identificadores do card no HTML
-     document.getElementById("firstName").innerHTML = user.first_name
-     document.getElementById("lastName").innerHTML = user.last_name
-     document.getElementById("emailUser").innerHTML = user.email;
-     document.getElementById("avatar").src = user.avatar;
-   } 
+  // RESOLUÇÃO: Sugestão extra - Mesa de trabalho Aula 18 
+  async function buscaUsuarioLogado() {
 
+    //Seleciona a url e o endpoint que será "consumido"
+    let urlUsuario = `https://reqres.in/api/users/2`;
 
+    //Captura os dados na API
+    let responseUser = await fetch(urlUsuario); //Equivalente ao GET
+
+    //Converte para json
+    let userJson = await responseUser.json()
+
+    //Atribui apena os objetos presentes no data
+    let user = userJson.data;
+
+    console.log("Nome do usuário capturado: " + user.first_name);
+    console.log("Email do usuário capturado: " + user.email);
+
+    //Enviando para os identificadores do card no HTML
+    document.getElementById("firstName").innerHTML = user.first_name
+    document.getElementById("lastName").innerHTML = user.last_name
+    document.getElementById("emailUser").innerHTML = user.email;
+    document.getElementById("avatar").src = user.avatar;
+  }
 }
 
 
