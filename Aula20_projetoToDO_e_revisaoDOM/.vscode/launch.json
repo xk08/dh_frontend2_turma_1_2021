@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Local(Firefox)",
+            "type": "firefox",
+            "request": "launch",
+            "file": "${workspaceFolder}"
+        },
+        {
+            "name": "Server(Firefox)",
+            "type": "firefox",
+            "request": "launch",
+            "url": "http://127.0.0.1:5500/",
+            "webRoot": "${workspaceFolder}"
+        },
+       
+    ]
+}
