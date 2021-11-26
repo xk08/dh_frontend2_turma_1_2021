@@ -187,12 +187,32 @@ a {
     z-index: 20;
 }
 
-.titulo-concluida {
+/* Tarefas concluidas */
+.titulo-concluida,
+.tarefas-concluidas {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     list-style: none;
-    margin: 2em 15%;
+    margin: 2rem auto;
 }
 
-/* Necessário incluir novas classes de acordo com a necessidade */
+/* circulo concluidas */
+.tarefas-concluidas .not-done {
+    background-color: var(--app-grey);
+    border-color: grey;
+}
+
+.tarefas-concluidas .not-done::before,
+.tarefas-concluidas .not-done::after {
+    background-color: grey !important;
+}
+
+.tarefas-concluidas .tarefa .descripcion {
+    background-color: white;
+}
+
+.tarefas-concluidas .tarefa .descripcion .nome {
+    color: grey;
+    text-decoration: line-through;
+}

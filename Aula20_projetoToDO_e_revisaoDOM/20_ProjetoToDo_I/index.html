@@ -12,49 +12,49 @@
 <body>
     <header>
         <nav>
-            <a href="#">My ToDo's</a>
+            <a href="#">Lista de tarefas</a>
         </nav>
 
-        <div class="user-info">
+        <!-- <div class="user-info">
             <p>username</p>
             <div class="user-image"></div>
-        </div>
+        </div> -->
     </header>
 
 
     <form class="nova-tarefa">
         <div class="not-done "></div>
 
-        <input type="text" placeholder="Nova tarefa">
+        <input id="nova-tarefa" type="text" placeholder="Nova tarefa">
 
-        <button>
+        <button id="adicionar-tarefa">
             <img src="./assets/plus.png" alt="Adicionar Tarefa">
         </button>
     </form>
 
 
     <ul class="tarefas-pendentes">
-        <li class="tarefa">
+       <!--  <li class="tarefa">
             <div class="not-done"></div>
             <div class="descripcion">
                 <p class="nome">Minha bela tarefa</p>
                 <p class="timestamp">Criada: 19/04/20</p>
             </div>
-        </li>
+        </li> -->
     </ul>
 
     <h2 class="titulo-concluida">Tarefas concluídas</h2>
-    <ul class="titulo-concluida">
-        <li class="tarefa">
+    <ul class="tarefas-concluidas">
+        <!-- <li class="tarefa">
             <div class="not-done"></div>
             <div class="descripcion">
                 <p class="nome">Minha bela tarefa</p>
                 <p class="timestamp">Criada: 19/04/20</p>
             </div>
-        </li>
+        </li> -->
     </ul>
 
-    <!--  -->
+    <script src="js/script.js"></script>
 
 </body>
 
